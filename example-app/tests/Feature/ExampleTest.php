@@ -18,4 +18,12 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function testSample()
+    {
+        $response = $this->getJson('api/sample')
+            ->assertOk();
+
+        self::assertEquals($response['example'], 'sample value');
+    }
 }
