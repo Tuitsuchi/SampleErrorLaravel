@@ -23,7 +23,6 @@ class ExampleTest extends TestCase
     {
         $response = $this->getJson('api/sample')
             ->assertOk();
-
-        self::assertEquals($response['example'], 'sample value');
+        self::assertEquals($response['sample'], 'sample value');
     }
 }
